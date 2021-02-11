@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- HIBERNATE specifications -->
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<!-- <property name="hibernate.hbm2ddl.auto">create-drop</property> -->
+		
+		<!-- As a comment inform about the operation done on the POJO Object -->
+		<property name="hibernate.use_sql_comments">true</property>
+
+
+		<!-- PROXOOL settings for HIBERNATE -->
+		<property name="hibernate.connection.provider_class">
+			org.hibernate.proxool.internal.ProxoolConnectionProvider
+		</property>
+		<property name="hibernate.proxool.pool_alias">pool</property>
+		<property name="hibernate.proxool.xml">proxool.xml</property>
+
+	</session-factory>
+</hibernate-configuration>
